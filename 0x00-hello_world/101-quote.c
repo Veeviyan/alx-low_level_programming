@@ -1,6 +1,12 @@
 #include <stdio.h>
 
-int main(void);
+/**
+ * main - main function
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-	putc("and that piece of art is useful" - Dora Korpar, 2015-10-19)
+	putchar("\"and that piece of art is useful" - "Dora Korpar, 2015 - 10 - 19");
+	return (1);
 }
