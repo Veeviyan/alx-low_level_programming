@@ -1,12 +1,13 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
- * main - main function
+ * main - prints out the lat part of a quote in the standard error
  *
- * Return: Always 0 (Success)
+ * Return: return 1 if success
  */
 int main(void)
 {
-	putchar("\"and that piece of art is useful" - "Dora Korpar, 2015 - 10 - 19");
+	write(2, "and that piece of art is useful - Dora Korpar, 2015-10-19\n", 58);
 	return (1);
 }
