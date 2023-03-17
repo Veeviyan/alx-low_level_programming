@@ -1,2 +1,2 @@
 #!/bin/bash
-nasm $CFILE -o main.o -f elf32 
+
