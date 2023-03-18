@@ -1,17 +1,17 @@
 #include <stdio.h>
 
-/** 
- * main - Entry point
- * Return - Always 0 (Success)
+/**
+ * main - main function
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	/* Get the character to be written */
-	char ch = 'a';
+	char i;
 
-	/* Write the character to stdout */
-	for (ch = 'a'; ch = 'z'; ch++);
-		putchar(ch);
-
+	for (i = 'a' ; i <= 'z' ; i++)
+		putchar(i);
+	putchar('\n');
 	return (0);
 }
