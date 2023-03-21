@@ -3,11 +3,13 @@
 /**
  * _islower - is lower function
  *
- * Return: always 0
+ * @c: parameter to be returned
+ *
+ * Return: 1 if c is lowercase, 0 if otherwise
  */
 int _islower(int c)
 {
-	if (c >= 'a' && c <= 'z')
+	if (c >= 97 && c <= 122)
 		return (1);
 	else
 		return (0);
