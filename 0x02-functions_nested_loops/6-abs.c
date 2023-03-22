@@ -1,21 +1,18 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
-  * _abs - checks for absolute value
-  *
-  * @c: parameter to be checked
-  *
-  * Return: Always c
-  */
-int _abs(int c)
+ * _abs - checks the absolute value
+ *
+ * @n: parameter to be computed
+ *
+ * Return: always n
+ */
+int _abs(int n)
 {
-	if (c < 0)
-	{	
-		c = -(c);
-	}
-	else if (c >= 0)
-	{	
-		c = c;
-	return (c);
-	}
+	if (n < 0)
+		n = -(n);
+	else if (n > 0)
+		n = n;
+	return (n);
 }
