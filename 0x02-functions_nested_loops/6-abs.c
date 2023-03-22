@@ -1,14 +1,21 @@
 #include "main.h"
 
 /**
- * _abs - function to be used
- *
- * int: parameter to be used
- *
- * Return: always 0
- */
-
-int _abs(int)
+  * _abs - checks for absolute value
+  *
+  * @c: parameter to be checked
+  *
+  * Return: Always c
+  */
+int _abs(int c)
 {
-	int i = 5
-
+	if (c < 0)
+	{	
+		c = -(c);
+	}
+	else if (c >= 0)
+	{	
+		c = c;
+	return (c);
+	}
+}
