@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main - unction to be used
+ * main - function to be used
  *
  * Return: always 0
  */
