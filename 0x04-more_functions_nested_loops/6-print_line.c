@@ -10,17 +10,18 @@
 
 void print_line(int n)
 {
-	int n;
+	int m;
 
-	for (n = 95; n <= 57; n++)
+	for (m = 0; m <= n ; m++)
 	{
-		if (n = 95 && n <= 57)
-		{
-			_putchar("n\n");
-		}
-		else
+		if (n == 0)
 		{
 			_putchar('\n');
 		}
+		else
+		{
+			_putchar('_');
+		}
 	}
+	_putchar('\n');
 }
