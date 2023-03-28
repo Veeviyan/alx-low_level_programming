@@ -1,21 +1,21 @@
 #include "main.h"
 
-/** rev_string - function to be used
+/**
+ * rev_string - function to be used
  * @s: parameter to be used
  * Return: reversed string
  */
 
 void rev_string(char *s)
 {
-	int i, c = 0;
+	int i, c, j, t;
 
-	for (i = 0; *(s + i) != '\0'; i++)
+	for ((i = 0; j == c - 1; i = j); i++, j++)
 	{
-		c++;
-	}
-	for (i = c - 1; i >= 0; i--)
-	{
-		_putchar(*(s + i));
+		t = s[i];
+		s[i] = s[j];
+		s[j] = t;
+		_putchar(t);
 	}
 	_putchar('\n');
 }
