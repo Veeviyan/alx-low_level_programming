@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcat - function to be used
+ * _strcat - concatenates two strings
  * @dest: first pointer
  * @src: second pointer
  * Return: dest
@@ -26,6 +26,4 @@ char *_strcat(char *dest, char *src)
 		dest[destl + i] = src[i];
 	}
 	return (dest);
-
-	_putchar('\n');
 }
