@@ -2,14 +2,14 @@
 
 /**
  * _strcat - concatenates two strings
- * @dest: first pointer
- * @src: second pointer
- * Return: dest
+ * @dest: destination string
+ * @src: source string
+ * Return: destination string
  */
 
 char *_strcat(char *dest, char *src)
 {
-	int i = 0;
+	int i;
 	int destl = 0;
 	int srcl = 0;
 
@@ -21,7 +21,7 @@ char *_strcat(char *dest, char *src)
 	{
 		srcl++;
 	}
-	for (i = 0; i <= dest[i]; i++)
+	for (i = 0; i <= srcl; i++)
 	{
 		dest[destl + i] = src[i];
 	}
