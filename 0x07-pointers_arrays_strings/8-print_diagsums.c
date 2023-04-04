@@ -9,25 +9,16 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i, j;
-	int sum;
+	int i;
+	int sum1, sum2 = 0;
 
-	printf("Enter the matrix elements:\n");
 	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < size; j++)
-		{
-			scanf("%d", &a[i][j]);
-		}
+		sum1 = sum1 + a[i * size + i];
 	}
-
-	printf("Sum of the two integers in each cell:\n");
-	for (i = 0; i < size; i++)
+	for (i = size - 1; i >= 0; i--)
 	{
-		for (j = 0; j < size; j++)
-		{
-			sum = a[i][j] + a[i][j];
-			printf("%d ", sum);
-		}
-		printf("\n");
+		sum2 += a[i * size + (size - i - 1)];
 	}
+	printf("%d, %d\n", sum1, sum2);
+}
