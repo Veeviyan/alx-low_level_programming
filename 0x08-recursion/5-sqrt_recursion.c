@@ -9,6 +9,8 @@
 
 int _sqrt_recursion_helper(int n, int i)
 {
+	if (n == 0 || n == 1)
+		return (1);
 	if (i * i == n)
 		return (i);
 	else if (i == n / 2)
