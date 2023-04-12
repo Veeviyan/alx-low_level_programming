@@ -11,7 +11,8 @@
 char *argstostr(int ac, char **av)
 {
 	char *s; 
-	int total, i, j, k;
+	int total = ac;
+	int i, j, k;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -29,13 +30,11 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			s[k] = av[i][j];
-			k++;
+			s[k++] = av[i][j];
 		}
-		s[k] = '\n';
-		k++;
+		s[k++] = '\n';
 	}
-	s[total] = '\0';
+	s[k] = '\0';
 
 	return (s);
 }
