@@ -10,7 +10,7 @@
 
 char *argstostr(int ac, char **av)
 {
-	char *s; 
+	char *s;
 	int total = ac;
 	int i, j, k;
 
@@ -21,7 +21,7 @@ char *argstostr(int ac, char **av)
 		for (j = 0; av[i][j] != '\0'; j++)
 			total++;
 
-	s = malloc(total * sizeof(char) + 1); 
+	s = malloc(total * sizeof(char) + 1);
 	if (s == NULL)
 		return (NULL);
 
