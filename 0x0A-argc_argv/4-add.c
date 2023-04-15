@@ -28,6 +28,7 @@ int main(int argc, char **argv)
 				if (s[j] < 48 || s[j] > 57)
 				{
 					printf("Error\n");
+					return (1);
 				}
 			}
 			add = add + atoi(s);
