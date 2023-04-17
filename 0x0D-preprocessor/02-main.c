@@ -1,10 +1,9 @@
 #include "main.h"
 #include <stdio.h>
-#define MSG "2-main.c"
 
-int main()
+int main(void)
 {
-	printf("%s\n", MSG);
-	
+	printf("%s\n", __FILE__);
+
 	return (0);
 }
