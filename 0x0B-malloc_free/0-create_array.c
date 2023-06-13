@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * creat-array - function that cretes an array of characters
+ * create_array - function that cretes an array of characters
  * @size: no of elements in the array
  * @c: initialized with the array of characters
  * Return: NULL if size is 0 and pointer to the array is NULL
