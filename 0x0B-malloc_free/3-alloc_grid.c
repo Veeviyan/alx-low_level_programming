@@ -18,8 +18,10 @@ int **alloc_grid(int width, int height)
 	two_array = malloc(sizeof(int *) * height);
 
 	if (two_array == NULL)
+	{
 		free(two_array);
 		return (NULL);
+	}
 
 	for (i = 0; i < height; i++)
 	{
