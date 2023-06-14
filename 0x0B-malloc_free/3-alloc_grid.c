@@ -9,39 +9,43 @@
  **/
 int **alloc_grid(int width, int height)
 {
-	int **two_array;
-	int i, j;
+	int i, j, k, l;
+	int **twodi;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	two_array = malloc(sizeof(int *) * height);
+	twodi = malloc(sizeof(int *) * height);
 
-	if (two_array == NULL)
+	if (twodi == NULL)
 	{
-		free(two_array);
+		free(twodi);
 		return (NULL);
 	}
 
 	for (i = 0; i < height; i++)
 	{
-		two_array[i] = malloc(sizeof(int) * width);
+		twodi[i] = malloc(sizeof(int) * width);
 
-		if (two_array[i] == NULL)
+		if (twodi[i] == NULL)
 		{
-			for (i = 0; i >= 0; i--)
-				free(two_array[i]);
+			for (j = i; j >= 0; j--)
+			{
+				free(twodi[j]);
+			}
 
-			free(two_array);
+			free(twodi);
 			return (NULL);
 		}
 	}
 
-	for (i = 0; i < height; i++)
+	for (k = 0; k < height; k++)
 	{
-		for (j = 0; j < width; j++)
-			two_array[i][j] = 0;
+		for (l = 0; l < width; l++)
+		{
+			twodi[k][l] = 0;
+		}
 	}
 
-	return (two_array);
+	return (twodi);
 }
