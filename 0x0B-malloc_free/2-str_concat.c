@@ -42,5 +42,7 @@ char *str_concat(char *s1, char *s2)
 		twostr[k++] = s2[j];
 	}
 
+	twostr[k] = '\0';
+
 	return (twostr);
 }
