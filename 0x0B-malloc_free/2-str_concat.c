@@ -14,35 +14,25 @@ char *str_concat(char *s1, char *s2)
 	char *twostr;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
+
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 
 	for (i = 0; s1[i] != '\0'; i++)
-	{
 		for (j = 0; s2[j] != '\0'; j++)
 			len++;
-	}
+
 	twostr = malloc(len * sizeof(char));
 
 	if (twostr == NULL)
-	{
 		return (NULL);
-	}
-	for (i = 0; s1[i]; i++)
-	{
-		twostr[k++] = s1[i];
-	}
-	for (j = 0; s2[j]; j++)
-	{
-		twostr[k++] = s2[j];
-	}
 
-	twostr[k] = '\0';
+	for (i = 0; s1[i]; i++)
+		twostr[k++] = s1[i];
+
+	for (j = 0; s2[j]; j++)
+		twostr[k++] = s2[j];
 
 	return (twostr);
 }
