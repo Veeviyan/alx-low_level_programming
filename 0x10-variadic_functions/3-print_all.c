@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+#include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -11,12 +12,14 @@ void print_all(const char * const format, ...)
 {
 	va_list data;
 	unsigned int a = 0;
-	char *separator = ", ";
+	char *separator;
 	char *s;
 
 	va_start(data, format);
 
-	while (format[a] != '\0' && format != NULL)
+	separator = ", ";
+	a = 0;
+	while (format[a] && format != NULL)
 	{
 		switch (format[a])
 		{
