@@ -7,46 +7,50 @@
  */
 int is_palindrome(char *s)
 {
-	if (*s == '0')
+	int index = 0;
+	int len = find_strlen(s);
+
+	if (!(*s))
 		return (1);
 
-	return (check_palindrome(s));
+	return (check_palindrome(s, len, index));
 }
 
 /**
- * check_palindrome - checks for a palindromic string
- * @s: string to be checked
- * Return: 1 if palindrome, else 0
+ * check_palindrome - Checks if a string is a palindrome.
+ * @s: The string to be checked.
+ * @len: The length of s.
+ * @index: The index of the string to be checked.
+ *
+ * Return: If the string is a palindrome - 1.
+ *         If the string is not a palindrome - 0.
  */
-int check_palindrome(char *s)
+int check_palindrome(char *s, int len, int index)
 {
-	int len = find_strlen(s) - 1;
+	if (s[index] == s[len / 2])
+		return (1);
 
-	if (*s == s[len])
-	{
-		s++;
-		len--;
-	}
-	else
-	{
-		return (0);
-	}
+	if (s[index] == s[len - index - 1])
+		return (check_palindrome(s, len, index + 1));
 
-	return (1);
+	return (0);
 }
 
 /**
- * find_strlen - finds the length of a string
- * @s: string to check
- * Return: length of the string
+ * find_strlen - Returns the length of a string.
+ * @s: The string to be measured.
+ *
+ * Return: The length of the string.
  */
 int find_strlen(char *s)
 {
-	if (*s == '\0')
+	int len = 0;
+
+	if (*(s + len))
 	{
-		return (0);
+		len++;
+		len += find_strlen(s + len);
 	}
 
-	s++;
-	return (find_strlen(s) + 1);
+	return (len);
 }
